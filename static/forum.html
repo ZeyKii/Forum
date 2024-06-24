@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Faux Rhum</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./dist/forum.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  {{ template "navbar" . }}
+  <main>
+    <section class="topics">
+      <div class="container">
+        <h2 class="margin-right">Top des sujets de discussion</h2>
+        <div class="topic-cards">
+          <div class="topic-card">
+            <h3><a href="/post?id=1">One Piece ?!</a></h3>
+            <p>Je pense que d'après le théorème de la relativité quantique restreinte, il serait possible de [...]</p>
+            <span>Par <a href="/post?id=1">SerreRich</a>, 19/03/2023</span>
+          </div>
+          <div class="topic-card">
+            <h3><a href="/post?id=5">Trésor Temporel</a></h3>
+            <p>Salut à tous... Je suis John Titor j'étais plus actif dans les années 2000 je sais que certains [...]</p>
+            <span>Par <a href="/post?id=5">John Titor</a>, 27/03/2023</span>
+          </div>
+          <div class="topic-card">
+            <h3><a href="/post?id=4">Fruit spéciaux</a></h3>
+            <p>Salut à tous ! récemment j'ai trouvé un fruit particulier.... Il a des sortes de spirales il est tout [...]</p>
+            <span>Par <a href="/post?id=4">Framboise</a>, 27/03/2023</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="members">
+      <div class="container">
+        <h2 class="margin-right">Membres Actifs</h2>
+        <div class="member-cards">
+          <div class="member-card">
+            <a href="#"><img src="\assets\users\upload-3LC.png" alt="Image de profil"></a>
+            <a href="#">3LC</a>
+          </div>
+          <div class="member-card">
+            <a href="#"><img src="assets\users\upload-Atila.png" alt="Image de profil"></a>
+            <a href="#">Atila</a>
+          </div>
+          <div class="member-card">
+            <a href="#"><img src="assets\users\upload-Framboise.png" alt="Image de profil"></a>
+            <a href="#">Framboise</a>
+          </div>
+          <div class="member-card">
+            <a href="#"><img src="assets\users\upload-Beber.s0rel.png" alt="Image de profil"></a>
+            <a href="#">Beber.s0rel</a>
+          </div>
+          <div class="member-card">
+            <a href="#"><img src="assets\users\upload-Thieriz.png" alt="Image de profil"></a>
+            <a href="#">Thieriz</a>
+          </div>
+          <div class="member-card">
+            <a href="#"><img src="assets\users\upload-SerreRich.png" alt="Image de profil"></a>
+            <a href="#">SerreRich</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container-footer">
+      <p>Copyright © 2023 Faux Rhum - Mentions légales</p>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,259 @@
+/* Réinitialisation des marges et des paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles du Body */
+body {
+  font-family: 'Poppins', cursive;
+  background-color: rgb(255, 250, 243);
+}
+
+/* Styles du header */
+header {
+  background-color: #262626;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 85px;
+}
+
+/* Styles de la Navbar */
+.container-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 5px;
+  color: #ffffff;
+}
+
+
+.logo h1 {
+  font-size: 32px;
+  color: #ffffff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f7c08a;
+}
+
+.icon-forum {
+  width: 55%;
+}
+
+.icon-profile {
+  width: 5%;
+}
+
+main {
+  margin-top: 85px;
+  padding-top: 2vh;
+}
+
+/* Styles pour la section des sujets */
+h2 {
+  font-size: 32px;
+  color: #333;
+  text-align: center;
+}
+
+.topic p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  margin-right: 1vh;
+}
+
+select {
+  padding: 1vh;
+  border-radius: 5px;
+  border: none;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* Styles pour la section des messages */
+.posts {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  margin: auto;
+}
+
+.post {
+  text-decoration: none;
+  color:black;
+  margin: 60px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-title {
+  margin-bottom: 2vh;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+  height: 65px;
+  width: 65px;
+  object-fit: cover;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.margin-top {
+  margin-top: 1vh;
+}
+
+/* Styles pour la section de création de message */
+.new-post {
+  margin: 20px;
+}
+
+.new-post h3 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.new-post label {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.new-post input,
+.new-post textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 1.5;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour les boutons */
+.new-post button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 9%;
+  align-items: center;
+  text-align: center;
+}
+
+.new-post button:hover {
+  background-color: #666;
+}
+
+/* Styles pour le formulaire */
+.form-harassment {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  height: 150px;
+}
+
+.submit {
+  display: flex;
+  justify-content: left;
+  position: relative;
+  margin-right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.boutons {
+  display: flex;
+  margin-left: 3%;
+}
+
+.boutons label {
+  display: block;
+  margin-bottom: 10%;
+  margin-right: 20%;
+  font-size: 80%;
+}
+
+.boutons input[type="radio"] {
+  margin-right: 10%;
+  width: 70%;
+  height: 70%;
+  box-shadow: none;
+}
+
+/* Styles pour le footer */
+footer {
+  background-color: #262626;
+  color: #fff;
+  height: 10vh;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 2vw;
+}
+
+textarea {
+  width: 100%;
+}

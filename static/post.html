@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Topics</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./dist/post.css">
+</head>
+
+<body>
+  {{ template "navbar" . }}
+  <main>
+    <section class="posts">
+      <div class="post">
+        <p class="post-title">{{ .Post.Post_Name }}</p>
+        <img src="{{ .Post.Author.Image }}" class="rounded-circle post-title" width="20%" height="20%">
+        <p class="text-align-center"> {{ .Post.Author.Username }} </p>
+        <span> {{ .Post.Date_Pb }} </span>
+        <p class="top-marge-content text-align-center"> {{ .Post.Content }} </p>
+        <!-- Bouton Like -->
+        <form method="post">
+          <button class="like-button margin-top" type="input" value="like" name="button">
+        </form>
+        <span class="like-icon">👍</span>
+        <span class="like-count"> {{ .Post.Like_Nb }} </span>
+        </button>
+        <!-- Bouton Dislike -->
+        <form method="post">
+          <button class="dislike-button" type="input" value="dislike" name="button">
+        </form>
+        <span class="dislike-icon">👎</span>
+        <span class="dislike-count">0</span>
+        </button>
+      </div>
+      {{ range .Comments }}
+      <div class="comment">
+        <img src="{{ .Author.Image }}" class="rounded-circle" width="20%" height="20%">
+        <h2 class="right-side"> {{ .Author.Username }} </h2>
+        <span>{{ .Date_Pb }}</span>
+        <p class="margin-top">{{ .Content }}</p>
+        <!-- Bouton Like -->
+        <form method="post">
+          <button class="like-button margin-top" type="input" value="like_comment" name="button">
+        </form>
+        <span class="like-icon">👍</span>
+        <span class="like-count">{{ .Like_Nb }}</span>
+        </button>
+        <!-- Bouton Dislike -->
+        <form method="post">
+          <button class="dislike-button" type="input" value="dislike_comment" name="button">
+        </form>
+        <span class="dislike-icon">👎</span>
+        <span class="dislike-count">{{ .Dislike_Nb }}</span>
+        </button>
+      </div>
+      {{ end }}
+    </section>
+    <section class="new-post">
+      <h3>Nouveau Commentaire</h3>
+      <form method="POST">
+        <textarea id="comment-content" name="comment-content"
+          placeholder="Pour que les discussions restent agréables, nous vous remercions de rester poli en toutes circonstances. En postant sur nos espaces, vous vous engagez à en respecter la charte d'utilisation. Tout message discriminatoire ou incitant à la haine sera supprimé et son auteur sanctionné."></textarea>
+        <button type="submit" name="button" value="comment">POSTER</button>
+      </form>
+      <span class="form-harassment">
+        Victime de harcèlement en ligne : <a href="https://www.jeuxvideo.com/harcelement.htm">comment réagir ?</a>
+      </span>
+    </section>
+  </main>
+  <footer>
+    <p>Copyright © 2023 Faux Rhum - Mentions légales</p>
+  </footer>
+</body>
+
+</html>

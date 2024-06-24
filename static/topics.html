@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Topics</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./dist/topics.css">
+</head>
+
+<body>
+  {{ template "navbar" . }}
+  <main>
+    <h2>Liste des sujets :</h2>
+    <div class="filter">
+      <form method="post">
+      <label for="filter-select">Filtrer par :</label>
+      <select id="filter-select" name="filter">
+        <option value="0" method="post">Tous</option>
+        <option value="1" method="post">Général</option>
+        <option value="2" method="post">Trésor</option>
+        <option value="3" method="post">Théorie</option>
+      </select>
+      <input name="submit" type="submit">
+    </form>
+    </div>
+    <section class="posts">
+      {{ range $DB := .Posts }}
+      <a href="/post?id={{ $DB.ID }}" class="post">
+        <p class="post-title">{{ $DB.Post_Name }}</p>
+          <img src="{{ .Author.Image }}" class="rounded-circle" width="20%" height="20%">
+          <p class="text-align-center"> {{ .Author.Username }} </p>
+          <span> {{ .Date_Pb }} </span>
+      </a>
+        {{ end}}
+    </section>
+    <section class="new-post">
+      <h3>Nouveau Sujet</h3>
+      <form action="/posting" method="POST">
+        <input type="text" id="post-title" name="post-title" placeholder="Saisir le titre du sujet.">
+        <textarea id="post-content" name="post-content"
+          placeholder="Pour que les discussions restent agréables, nous vous remercions de rester poli en toutes circonstances. En postant sur nos espaces, vous vous engagez à en respecter la charte d'utilisation. Tout message discriminatoire ou incitant à la haine sera supprimé et son auteur sanctionné."></textarea>
+        <div class="submit">
+        <button type="submit">POSTER</button>  
+          <div class="boutons">
+            <label for="bouton1">Général
+              <input type="radio" id="Général" name="tags" value="Général" checked>
+            </label>
+            <label for="bouton2">Trésor
+              <input type="radio" id="Chasse_au_trésor" name="tags" value="Chasse_au_trésor">
+            </label>
+            <label for="bouton3">Théorie
+              <input type="radio" id="Théorie" name="tags" value="Théorie">
+            </label>
+          </div>
+        </div>
+      </form>
+      
+      <span class="form-harassment">
+        Victime de harcèlement en ligne : <a href="https://www.jeuxvideo.com/harcelement.htm">comment réagir ?</a>
+      </span>
+    </section>
+  </main>
+  <footer>
+     <p>Copyright © 2023 Faux Rhum - Mentions légales</p>
+  </footer>
+</body>
+</html>

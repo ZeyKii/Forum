@@ -1,0 +1,206 @@
+/* Réinitialisation des marges et des paddings */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Styles du header */
+  header {
+    background-color: #262626;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* Styles du Body */
+  body {
+    font-family: 'Poppins', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(255, 250, 243);
+  } 
+  
+  /* Style pour le carré d'image de profil */
+  .profile-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10%;
+  }
+
+  .profile-background-image {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    background: linear-gradient(to top left, #134e37, #809d52) border-box;
+    transform: translate(-50%, -50%);
+    height: 220px;
+    width: 220px;
+    object-fit: cover;
+  }
+
+  .contour-profile-image {
+    z-index: 0;
+    height: 300px;
+  }
+
+  /* Styles de la Biographie */
+  .new-bio {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 6vw;
+  }
+  
+  .new-bio h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    margin-left: 11.5vw;
+  }
+  
+  .new-bio input,
+  .new-bio textarea {
+    width: 30vw;
+    height: 20vh;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 1.5;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    resize: none;
+  }
+  
+  .new-bio button {
+    display: block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .new-bio button:hover {
+    background-color: #666;
+  }
+
+  .bio-container {
+    margin-top: 2vh;
+    text-align: center;
+  }
+
+  hr{
+    margin: auto;
+    width: 20%;
+    color: black;
+   }
+
+  /* Styles de la Navbar */
+  .container-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 5px;
+    color: #ffffff;
+  }
+
+  .logo h1 {
+    font-size: 32px;
+    color: #ffffff;
+  }
+
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  nav ul li:first-child {
+    margin-left: 0;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #f7c08a;
+  }
+
+  .icon-forum {
+    width: 55%;
+    }
+
+  .icon-profile {
+    width: 5%;
+    }
+  
+  /* Style pour le nom et les informations de l'utilisateur */
+  .user-info {
+    text-align: center;
+    margin-top: 3%;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  p {
+    margin: 5px 0;
+  }
+
+  /* Style pour la modification de l'image d'utilisateur */
+  .change-image-profil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 20%;
+    height: 20%;
+    margin-left: 41%;
+  }
+
+  .upload-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    width: 100%;
+  }
+
+  .upload-input {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .upload-btn {
+    display: block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

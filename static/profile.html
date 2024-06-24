@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./dist/profile.css">
+</head>
+
+<body>
+  {{ template "navbar" . }}
+  <div class="profile-image">
+    <img src="../assets/ContourImageDeProfile.png" alt="Contour image de profil" class="contour-profile-image">
+    <img src= {{ .Users.Image }} alt="Image de profil" class="profile-background-image">
+    <section class="new-bio">
+      <h3>Biographie</h3>
+      <form  method="POST">
+        <div class="bio-input-group">
+        <textarea id="bio-content" name="bio-content"
+          placeholder="Pour que les discussions restent agréables, nous vous remercions de rester poli en toutes circonstances. En postant sur nos espaces, vous vous engagez à en respecter la charte d'utilisation. Tout message discriminatoire ou incitant à la haine sera supprimé et son auteur sanctionné."></textarea>
+        <button type="submit">APPLIQUER</button>
+      </div>
+      </form>
+    </section>
+  </div>
+  <div class="change-image-profil">
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <label for="image-upload" class="upload-label">Choisir une image</label>
+      <input type="file" name="uploadFile" id="image-upload" class="upload-input" accept="image/*">
+      <button type="submit" value="upload" class="upload-btn">Envoyer</button>
+    </form>
+    </div>
+  <div class="user-info">
+    <h1>{{ .Users.Username }}</h1>
+    <hr>
+    <p>Adresse e-mail : {{ .Users.Email }}</p>
+    <p>Nombre de sujets postés :</p>
+    <p>Nombre de commentaire :</p>
+  </div>
+  <hr>
+  <div class="bio-container">
+    <p> {{ .Users.Biography }} </p>
+  </div>
+</body>
+</html>

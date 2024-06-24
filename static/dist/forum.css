@@ -1,0 +1,271 @@
+/* Réinitialisation des marges et des paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles du Header */
+header {
+  background-color: #262626;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.container-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 5px;
+  color: #ffffff;
+}
+
+/* Styles du Body */
+body {
+  font-family: 'Poppins', cursive;
+  background-color: rgb(255, 250, 243);
+}
+
+/* Styles de la Navbar */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 5px;
+  color: #ffffff;
+}
+
+.logo h1 {
+  font-size: 32px;
+  color: #ffffff;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f7c08a;
+}
+
+.icon-forum {
+  width: 55%;
+}
+
+.icon-profile {
+  width: 5%;
+}
+
+/* Styles de la section des derniers sujets de discussion */
+.topics {
+  padding: 150px 0;
+  background-color: rgb(255, 250, 243);
+}
+
+.topics h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.topic-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.topic-card {
+  background: -webkit-linear-gradient(bottom, #cc8316, #DCBA4C);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-bottom: 30px;
+  width: calc(33.33% - 20px);
+  border-radius: 10% 10%;
+}
+
+.topic-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #262626;
+}
+
+.topic-card p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.topic-card span {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* Styles de la section des membres récents */
+.members {
+  background-color: rgb(255, 248, 235);
+  padding: 50px 0;
+}
+
+.members h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.member-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.member-card {
+  background: -webkit-linear-gradient(bottom, #cc8316, #DCBA4C);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-bottom: 30px;
+  width: calc(28% - 20px);
+  border-radius: 10% 10%;
+}
+
+.member-card a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #262626;
+  transition: color 0.3s;
+}
+
+.member-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.margin-right {
+  margin-right: 4vw;
+}
+
+/* Styles du footer */
+footer {
+  background-color: #262626;
+  padding: 20px;
+}
+
+.container-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 5px;
+  color: #ffffff;
+  margin-left: 2%;
+}
+
+/* Styles pour les pages "A propos" et "Contact" */
+.about,
+.contact {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+
+.about h2,
+.contact h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.about p,
+.contact p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact label,
+.contact input,
+.contact textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact button {
+  background-color: #f7c08a;
+  border: none;
+  color: #262626;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact button:hover {
+  background-color: #ff9f4d;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .logo h1 {
+    font-size: 24px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .topic-card,
+  .member-card {
+    width: 100%;
+  }
+
+  .about,
+  .contact {
+    padding: 50px 10px;
+  }
+}
